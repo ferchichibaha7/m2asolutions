@@ -4,13 +4,15 @@ import "./src/js/theme.js";
 import "./src/js/solutions.js";
 
 const links = document.querySelectorAll(".nav-link");
- console.log(links)
+const toggler = document.querySelector('#hbr')
+
 for (const link of links) {
   link.addEventListener("click", clickHandler);
 }
  
 function clickHandler(e) {
   e.preventDefault();
+  toggler.removeAttribute('checked')
   const href = this.getAttribute("href");
   const offsetTop = document.querySelector(href).offsetTop;
  
