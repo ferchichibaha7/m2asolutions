@@ -11,13 +11,11 @@
     </head>
     <body class="min-h-screen overflow-x-hidden bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <header>
-            <input type="checkbox" name="hbr" id="hbr" class="hbr peer" hidden aria-hidden="true" />
-            <nav class="navbar peer-checked:navbar-active fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blur dark:border-gray-700/30 dark:bg-gray-900/80">
+            <nav id="navbar" class="fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blur dark:border-gray-700/30 dark:bg-gray-900/80">
                 <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                     <div class="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
-                        <input aria-hidden="true" type="checkbox" name="toggle_nav" id="toggle_nav" class="peer hidden" />
-                        <div class="peer-checked:navbar-active relative z-20 flex w-full justify-between md:px-0 lg:w-max">
-                            <a href="/" aria-label="logo" class="flex items-center space-x-2">
+                        <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
+                            <a href="./../#home" aria-label="ampire logo" class="nav-link flex items-center space-x-2">
                                 <svg class="h-7 w-auto" viewBox="0 0 1206 270" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4_24)">
                                         <path class="fill-[#24221B] dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M184.589 48.5615L259.174 177.176C271.689 198.757 264.34 226.397 242.76 238.912C221.862 251.03 195.284 244.523 182.258 224.504L168.033 245.393C189.368 269.831 225.685 276.557 254.799 259.673C287.846 240.509 299.1 198.183 279.936 165.136L204.374 34.8366C201.937 30.6351 199.126 26.7859 196.008 23.3066L184.589 48.5615Z" />
@@ -36,49 +34,51 @@
                                 </svg>
                             </a>
 
-                            <label role="button" for="toggle_nav" aria-label="humburger" class="hamburger relative -mr-6 p-6 lg:hidden">
+                            <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
                                 <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
                                 <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
-                            </label>
+                            </button>
                         </div>
-                        <label for="toggle_nav" aria-hidden="true" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 peer-checked:origin-top peer-checked:scale-y-100 dark:bg-gray-900/70 lg:hidden"></label>
-                        <div class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 peer-checked:visible peer-checked:scale-100 peer-checked:opacity-100 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none lg:peer-checked:translate-y-0 dark:lg:bg-transparent">
+                        <div aria-hidden="true" id="layer" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-gray-900/70 lg:hidden"></div>
+                        <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 
+                                    dark:border-gray-700 dark:bg-gray-800 dark:shadow-none 
+                                    lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent">
                             <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
                                 <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:space-y-0 lg:text-sm">
                                     <li>
-                                        <a href="solution.html" class="block transition hover:text-primary dark:hover:text-primaryLight md:px-4">
-                                            <span>Solution</span>
+                                        <a href="./../#solutions" class="block nav-link transition hover:text-primary dark:hover:text-primaryLight md:px-4">
+                                            <span>Solutions</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="customers.html" class="block transition hover:text-primary dark:hover:text-primaryLight md:px-4">
-                                            <span>Customers</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pricing.html" class="block transition hover:text-primary dark:hover:text-primaryLight md:px-4">
-                                            <span>Pricing</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html" class="block transition hover:text-primary dark:hover:text-primaryLight md:px-4">
-                                            <span>Blog</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html" class="block transition hover:text-primary dark:hover:text-primaryLight md:px-4">
+                                        <a href="./../#company" class="block nav-link transition hover:text-primary dark:hover:text-primaryLight md:px-4">
                                             <span>Company</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./../#features" class="block nav-link transition hover:text-primary dark:hover:text-primaryLight md:px-4">
+                                            <span>Features</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./../#testimonials" class="block nav-link transition hover:text-primary dark:hover:text-primaryLight md:px-4">
+                                            <span>Testimonials</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./../#pricing" class="block nav-link transition hover:text-primary dark:hover:text-primaryLight md:px-4">
+                                            <span>Pricing</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="mt-12 -ml-1 flex w-full flex-col space-y-2 border-primary/10 dark:border-gray-700 sm:flex-row md:w-max lg:mt-0 lg:mr-6 lg:space-y-0 lg:border-l lg:pl-6">
-                                <a href="contact.html" class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-primaryLight sm:px-4 lg:before:border lg:before:border-gray-200 lg:before:bg-gray-100 lg:dark:before:bg-gray-800">
+                                <a href="./contact.html" class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-primaryLight sm:px-4 lg:before:border lg:before:border-gray-200 lg:before:bg-gray-100 lg:dark:before:bg-gray-800">
                                     <span class="relative text-sm font-semibold text-white dark:text-gray-900 lg:text-primary lg:dark:text-white">Get started</span>
                                 </a>
                             </div>
-                            <button class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex">
+                            <button aria-label="switch theme" class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                                 </svg>
@@ -88,7 +88,7 @@
                             </button>
                         </div>
                         <div class="fixed top-3 right-14 z-20 sm:right-24 lg:hidden">
-                            <button class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                            <button aria-label="switche theme" class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                                 </svg>
