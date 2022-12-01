@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Urbanist";
+}
+
+@layer components {
+    .navbar-active .hamburger div:first-child {
+        @apply translate-y-1.5 rotate-45;
+    }
+    .navbar-active .hamburger div:last-child {
+        @apply -translate-y-1 -rotate-45;
+    }
+    .navbar-active div:first-child div:first-child div:last-child {
+        @apply block lg:flex;
+    }
+}
+
+.st0 {
+    @apply fill-secondaryLight;
+}
+
+.hue-rotate {
+    transition: all 0.5s;
+    animation: infinite hue 5s;
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(90deg);
+    }
+    100% {
+        filter: hue-rotate(180deg);
+    }
+}
