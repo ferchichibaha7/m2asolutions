@@ -3,8 +3,10 @@ let indicator = document.querySelector(".tab-indicator");
 let panels = document.querySelectorAll(".panel");
 let previews = document.querySelectorAll(".panel-preview");
 
-indicator.style.width = tabs[0].getBoundingClientRect().width + "px";
-indicator.style.left = tabs[0].getBoundingClientRect().left - tabs[0].parentElement.getBoundingClientRect().left + "px";
+if (indicator !== null) {
+    indicator.style.width = tabs[0].getBoundingClientRect().width + "px";
+    indicator.style.left = tabs[0].getBoundingClientRect().left - tabs[0].parentElement.getBoundingClientRect().left + "px";
+}
 
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => {

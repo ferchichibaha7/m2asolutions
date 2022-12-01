@@ -13,11 +13,11 @@ body {
     .navbar-active #hamburger div:last-child {
         @apply -translate-y-1 -rotate-45;
     }
-    .navbar-active #layer{
-        @apply origin-top scale-y-100
+    .navbar-active #layer {
+        @apply origin-top scale-y-100;
     }
     .navbar-active #navlinks {
-        @apply block lg:flex visible scale-100 opacity-100 lg:translate-y-0;
+        @apply visible block scale-100 opacity-100 lg:flex lg:translate-y-0;
     }
 }
 

@@ -3,7 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
     content: ["./*.html", "./pages/*.html"],
-    safelist: ["rotate-180", "translate-y-0", "translate-y-[100%]", "z-10", "scale-75", 'navbar-active'],
+    safelist: ["rotate-180", "translate-y-0", "translate-y-[100%]", "z-10", "scale-75", "navbar-active"],
     presets: [],
     darkMode: "class", // or 'media' or 'class'
     theme: {
