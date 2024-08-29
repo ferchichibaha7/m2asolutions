@@ -1,5 +1,5 @@
 {
-    "name": "ampire-lite",
+    "name": "m2asolutions",
     "private": true,
     "version": "1.0.0",
     "scripts": {
@@ -25,5 +25,10 @@
         "vite"
     ],
     "author": "Méschac irung",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "firebase": "^10.12.3",
+        "i18next": "^23.14.0",
+        "nodemailer": "^6.9.14"
+    }
 }
